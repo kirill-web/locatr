@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Account - My Stock</title>
+	<meta name="google-signin-client_id" content="864466645583-e5g2ha19f9q4iql1ujbiba50dvgtfti3.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+	<header class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-lg-9 col-md-8 col-xs-5">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo" class="logo__img">
+					</a>
+					<form action="#" class="search-form">
+						<div class="search-form__wrapper">
+							<input class="search-form__input common-input" type="text" placeholder="What are you looking for?">
+							<button type="submit" class="search-form__submit-btn"></button>
+						</div>
+					</form>
+				</div>
+				<div class="login col-lg-3 col-md-4 col-xs-7">
+					<div class="g-signin2 login__google" data-onsuccess="onSignIn"></div>
+					<button type="button" class="login__menu-toggle" id="js-menu-toggle"><span></span>
+					<span></span>
+					<span></span></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="hide-menu">
+		<button type="button" class="hide-menu__btn" id="js-hide-menu"></button>
+		<ul>
+			<li><a href="index.html" class="hide-menu__link">Home</a></li>
+			<li><a href="#" class="hide-menu__link">About Us</a></li>
+			<li><a href="#" class="hide-menu__link">Help Page</a></li>
+			<li><a href="#" class="hide-menu__link">Contact</a></li>
+			<li><a href="single-item.html" class="hide-menu__link">Add Single Item</a></li>
+			<li><a href="my-stock.html" class="hide-menu__link">My Stock</a></li>
+			<li><a href="analytics.html" class="hide-menu__link">My Analytics</a></li>
+			<li><a href="add-spreadsheet.html" class="hide-menu__link">Add Spreadsheet</a></li>
+			<li><a href="add-system.html" class="hide-menu__link">Add System</a></li>
+		</ul>
+	</div>
+	<main class="page-main">
+		<section class="my-stock common-section">
+			<h1 class="my-stock__title common-title">
+				<div class="container">My Account - My Stock</div>
+			</h1>
+			<div class="container">
+				<form action="#" class="my-stock__form">
+					<input type="checkbox" class="my-stock__check" id="check1">
+					<label for="check1" class="my-stock__label">Items with image</label>
+					<button type="button" class="my-stock__btn page-button">Add New Product</button>
+					<!--
+				<div class="my-stock__sel-wrap">
+					<select class="my-stock__select common-select">
+					<option value="Categories">Categories</option>
+					<option value="Another Item">Another Item</option>
+				</select>
+				</div>
+				<div class="my-stock__sel-wrap">
+					<select class="my-stock__select common-select">
+					<option value="Filter Products">Filter Products</option>
+					<option value="Another Item">Another Item</option>
+				</select>
+				</div>
+-->
+					<table class="common-table my-stock__table">
+						<tr>
+							<th>Item Name</th>
+							<th>Price</th>
+							<th>Location</th>
+							<th>Category</th>
+							<th>Image</th>
+							<th>Actions</th>
+						</tr>
+						<tr>
+							<td>Diet Coke 24x330ml</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Balsamic Vinegar 2x251ml</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Diet Coke 24x330ml</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Balsamic Vinegar 2x251ml</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Diet Coke 24x330ml</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Balsamic Vinegar 2x251ml</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Tomato Ketchup 3x1.07g</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Tomato Ketchup 3x1.07g</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+						<tr>
+							<td>Tomato Ketchup 3x1.07g</td>
+							<td>£6.00</td>
+							<td>SW1 2HP</td>
+							<td><select name="" id="" class="table-select">
+							<option value="">Item 1</option>
+							<option value="">Item 2</option>
+						</select></td>
+							<td><button type="button" class="table-upload">Upload Image</button></td>
+							<td><button class="table-action table-action--edit" type="button"></button><button class="table-action table-action--delete" type="button"></button></td>
+						</tr>
+					</table>
+					<div class="my-stock__pagination">
+						<a href="#" class="my-stock__arrows my-stock__arrows--left"></a>
+						<a href="#" class="my-stock__pages my-stock__pages--active">1</a>
+						<a href="#" class="my-stock__pages">2</a>
+						<a href="#" class="my-stock__pages">3</a>
+						<a href="#" class="my-stock__pages">4</a>
+						<a href="#" class="my-stock__pages">5</a>
+						<a href="#" class="my-stock__arrows my-stock__arrows--right"></a>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-md-4 col-sm-4">
+					<a href="/">
+						<img src="img/logo.png" alt="Logo">
+					</a>
+					<p class="logo__descr">The Locatr purpose is to help people search products by locations.</p>
+				</div>
+				<div class="page-footer__menu col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Menu</li>
+						<li><a href="#" class="page-footer__link">Home</a></li>
+						<li><a href="#" class="page-footer__link">About Us</a></li>
+						<li><a href="#" class="page-footer__link">How It Works</a></li>
+						<li><a href="#" class="page-footer__link">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__support col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Support</li>
+						<li><a href="#" class="page-footer__link">FAQ</a></li>
+						<li><a href="#" class="page-footer__link">Sitemap</a></li>
+						<li><a href="#" class="page-footer__link">Terms & Conditions</a></li>
+						<li><a href="#" class="page-footer__link">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__in-touch col-md-4 col-xs-12">
+					<ul>
+						<li class="page-footer__subtitle">Get In Touch</li>
+						<li class="page-footer__link page-footer__link--address">72 Uxbridge Road SLAWSTON, LE16 7LT</li>
+						<li class="page-footer__link page-footer__link--mail">support@locatr.uk</li>
+						<li class="page-footer__link page-footer__link--tel">078 8836 4448</li>
+					</ul>
+					<div class="page-footer__socials">
+						<a class="page-footer__fb" href="#"></a>
+						<a class="page-footer__tw" href="#"></a>
+						<a class="page-footer__ln" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-footer__copy">
+			© 2017 Locatr. All rights reserved.
+		</div>
+	</footer>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$.getJSON("js/jsontest.json", function(data) {
+				$(".search-form__input").autocomplete({
+					source: data
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

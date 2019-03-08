@@ -1,0 +1,116 @@
+.my-stock {
+	&__form {
+		text-align: right;
+	}
+	&__btn,
+	&__sel-wrap {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 15px;
+		margin-bottom: 0;
+	}
+	&__check {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 17px;
+		color: $header-color;
+		margin-left: 5px;
+	}
+	&__table {
+		margin-top: 35px;
+		.table-select {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			outline: 0;
+			background-color: transparent;
+		}
+		.table-upload {
+			position: relative;
+			border: 0;
+			background-color: transparent;
+			padding: 0;
+			color: $first-color;
+			padding-right: 25px;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%);
+				background-repeat: no-repeat;
+				background-image: url(../img/upload-symbol.png);
+				width: 13px;
+				height: 15px;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.table-action {
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			position: relative;
+			width: 15px;
+			height: 15px;
+			margin-bottom: 5px;
+			&--edit {
+				background-image: url(../img/edit.png);
+			}
+			&--delete {
+				background-image: url(../img/delete.png);
+				margin-left: 15px;
+			}
+		}
+	}
+	&__pagination {
+		margin-bottom: 95px;
+		font-size: 0;
+	}
+	&__arrows,
+	&__pages {
+		display: inline-block;
+		vertical-align: middle;
+		text-decoration: none;
+		padding: 5px 10px;
+		border-radius: 4px;
+	}
+	&__arrows {
+		width: 32px;
+		height: 30px;
+		background-position: 50%;
+		background-color: $how-works-bg;
+		background-repeat: no-repeat;
+		&:first-child {
+			margin-right: 30px;
+		}
+		&:last-child {
+			margin-left: 30px;
+		}
+		&--left {
+			background-image: url(../img/arrow-left.png);
+		}
+		&--right {
+			transform: rotate(180deg);
+			background-image: url(../img/arrow-left.png);
+		}
+		&:hover {
+			background-color: darken($how-works-bg, 10%);
+		}
+	}
+	&__pages {
+		font-size: 16px;
+		color: $text-color;
+		font-family: $muli-r;
+		&:hover,
+		&--active {
+			color: $white-color;
+			background-color: $first-color;
+		}
+	}
+}

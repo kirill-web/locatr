@@ -1,0 +1,178 @@
+// Colors
+$white-color: #fff;
+$black-color: #000;
+$first-color: #109d59; // Green
+$second-color: #ffbb33; // Orange
+$header-color: #2d323b;
+$text-color: #7b7b7b;
+$footer-bg: #1d1f22;
+$copy-bg: #16171a;
+$border-color: #d5d5d5;
+$how-works-bg: #ececec;
+$td-bg: #f9f9f9;
+$cancel-btn: #bcbcbc;
+$upload-bg: #e3f7ed;
+$views-bg: #ffe7c7;
+$views-border: #f3a233;
+$clicks-bg: #d2ffe9;
+$clicks-border: #07b05e;
+$fav-bg: #ffcfcd;
+$fav-border: #d8605a;
+// Fonts
+$muli-r:'Muli-Regular';
+$muli-l:'Muli-Light';
+$muli-b:'Muli-Bold';
+$roboto-r:'Roboto-Regular';
+$roboto-l:'Roboto-Light';
+$roboto-b:'Roboto-Bold';
+@font-face {
+	font-family: 'Muli-Regular';
+	src: url('../fonts/Muli-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muli-Bold';
+	src: url('../fonts/Muli-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muli-Light';
+	src: url('../fonts/Muli-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../fonts/Roboto-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Common styles
+html {
+	overflow-x: hidden;
+	position: relative;
+//	transition: all 0.4s;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.page-title {
+	font-size: 36px;
+	margin-top: 0;
+	margin-bottom: 5px;
+	text-align: center;
+	font-family: $roboto-b;
+	font-weight: 700;
+	color: $header-color;
+}
+
+.page-subtitle {
+	font-size: 17px;
+	margin-top: 0;
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: $muli-r;
+	font-weight: 400;
+	color: $text-color;
+}
+
+.page-button {
+	display: inline-block;
+	vertical-align: middle;
+	border: 0;
+	font-size: 17px;
+	color: $white-color;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 15px 47px;
+	font-family: $muli-b;
+	background-color: $first-color;
+	&:hover {
+		text-decoration: none;
+		background-color: lighten($first-color, 3%);
+	}
+}
+
+.common-section {
+	&>.container {
+		margin: 0 auto;
+		max-width: 1200px;
+	}
+}
+
+.common-table {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	th {
+		font-size: 20px;
+		font-family: $muli-b;
+		color: $header-color;
+		padding: 20px;
+		text-align: left;
+		border: 1px solid $border-color;
+		background-color: $how-works-bg;
+		&:not(:first-child) {
+			text-align: center;
+		}
+	}
+	td {
+		font-size: 17px;
+		font-family: $muli-r;
+		color: $text-color;
+		padding: 20px;
+		text-align: left;
+		border: 1px solid $border-color;
+		&:not(:first-child) {
+			text-align: center;
+		}
+	}
+	tr {
+		&:nth-child(2n+1) td {
+			background-color: $td-bg;
+		}
+	}
+}
+
+.common-input {
+	outline: 0;
+	border: 1px solid $border-color;
+	width: 100%;
+	font-size: 17px;
+	color: $text-color;
+	border-radius: 4px;
+	padding: 13px 23px 15px 23px;
+}
+
+.common-title {
+	padding-top: 55px;
+	padding-bottom: 60px;
+	font-size: 30px;
+	margin-top: 0;
+	margin-bottom: 80px;
+	background-color: $how-works-bg;
+	color: $header-color;
+}

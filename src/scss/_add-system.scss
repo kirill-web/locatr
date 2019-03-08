@@ -1,0 +1,36 @@
+.add-system {
+	&__subtitle {
+		color: $header-color;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-size: 36px;
+		font-family: $roboto-b;
+	}
+	&__descr {
+		text-align: center;
+		color: $text-color;
+		margin-top: 0;
+		margin-bottom: 55px;
+		font-size: 17px;
+		line-height: 24px;
+	}
+	&__form {
+		padding-bottom: 95px;
+		&-wrap {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row;
+		}
+	}
+	&__input,
+	&__select {
+		width: 48%;
+		margin-bottom: 18px;
+	}
+}

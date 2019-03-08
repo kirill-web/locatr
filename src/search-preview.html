@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search Previews</title>
+	<meta name="google-signin-client_id" content="864466645583-e5g2ha19f9q4iql1ujbiba50dvgtfti3.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+	<header class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-lg-9 col-md-8 col-xs-5">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo" class="logo__img">
+					</a>
+					<form action="#" class="search-form">
+						<div class="search-form__wrapper">
+							<input class="search-form__input common-input" type="text" placeholder="What are you looking for?">
+							<button type="submit" class="search-form__submit-btn"></button>
+						</div>
+					</form>
+				</div>
+				<div class="login col-lg-3 col-md-4 col-xs-7">
+					<div class="g-signin2 login__google" data-onsuccess="onSignIn"></div>
+					<button type="button" class="login__menu-toggle" id="js-menu-toggle"><span></span>
+					<span></span>
+					<span></span></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="hide-menu">
+		<button type="button" class="hide-menu__btn" id="js-hide-menu"></button>
+		<ul>
+			<li><a href="index.html" class="hide-menu__link">Home</a></li>
+			<li><a href="#" class="hide-menu__link">About Us</a></li>
+			<li><a href="#" class="hide-menu__link">Help Page</a></li>
+			<li><a href="#" class="hide-menu__link">Contact</a></li>
+			<li><a href="single-item.html" class="hide-menu__link">Add Single Item</a></li>
+			<li><a href="my-stock.html" class="hide-menu__link">My Stock</a></li>
+			<li><a href="analytics.html" class="hide-menu__link">My Analytics</a></li>
+			<li><a href="add-spreadsheet.html" class="hide-menu__link">Add Spreadsheet</a></li>
+			<li><a href="add-system.html" class="hide-menu__link">Add System</a></li>
+		</ul>
+	</div>
+	<main class="page-main">
+		<section class="search-preview common-section">
+			<h1 class="search-preview__title common-title">
+				<div class="container">Search Results Preview</div>
+			</h1>
+			<div class="container">
+				<table class="search-preview__table common-table">
+					<tr>
+						<th>Search Keyword</th>
+						<th>Search Result Pages</th>
+						<th>Search Result Clicks</th>
+						<th>Click per Search</th>
+						<th>Search Result Count</th>
+						<th>No Result Pages</th>
+					</tr>
+					<tr>
+						<td>Sample Item/Shop Name 1</td>
+						<td>39</td>
+						<td>9</td>
+						<td>0.22</td>
+						<td>691</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Sample Item/Shop Name 2</td>
+						<td>55</td>
+						<td>24</td>
+						<td>0.18</td>
+						<td>248</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Sample Item/Shop Name 3</td>
+						<td>42</td>
+						<td>7</td>
+						<td>0.2</td>
+						<td>1345</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Sample Item/Shop Name 4</td>
+						<td>12</td>
+						<td>10</td>
+						<td>0.14</td>
+						<td>123</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Sample Item/Shop Name 5</td>
+						<td>34</td>
+						<td>19</td>
+						<td>0.1</td>
+						<td>413</td>
+						<td>0</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-md-4 col-sm-4">
+					<a href="/">
+						<img src="img/logo.png" alt="Logo">
+					</a>
+					<p class="logo__descr">The Locatr purpose is to help people search products by locations.</p>
+				</div>
+				<div class="page-footer__menu col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Menu</li>
+						<li><a href="#" class="page-footer__link">Home</a></li>
+						<li><a href="#" class="page-footer__link">About Us</a></li>
+						<li><a href="#" class="page-footer__link">How It Works</a></li>
+						<li><a href="#" class="page-footer__link">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__support col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Support</li>
+						<li><a href="#" class="page-footer__link">FAQ</a></li>
+						<li><a href="#" class="page-footer__link">Sitemap</a></li>
+						<li><a href="#" class="page-footer__link">Terms & Conditions</a></li>
+						<li><a href="#" class="page-footer__link">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__in-touch col-md-4 col-xs-12">
+					<ul>
+						<li class="page-footer__subtitle">Get In Touch</li>
+						<li class="page-footer__link page-footer__link--address">72 Uxbridge Road SLAWSTON, LE16 7LT</li>
+						<li class="page-footer__link page-footer__link--mail">support@locatr.uk</li>
+						<li class="page-footer__link page-footer__link--tel">078 8836 4448</li>
+					</ul>
+					<div class="page-footer__socials">
+						<a class="page-footer__fb" href="#"></a>
+						<a class="page-footer__tw" href="#"></a>
+						<a class="page-footer__ln" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-footer__copy">
+			© 2017 Locatr. All rights reserved.
+		</div>
+	</footer>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$.getJSON("js/jsontest.json", function(data) {
+				$(".search-form__input").autocomplete({
+					source: data
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

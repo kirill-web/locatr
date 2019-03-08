@@ -1,0 +1,19 @@
+.search-preview {
+	&__table {
+		th {
+			width: auto !important;
+			&:not(:first-child) {
+				text-align: center;
+			}
+			&:first-child {
+				width: 25% !important;
+			}
+		}
+		td {
+			&:not(:first-child) {
+				text-align: center !important;
+			}
+			width: auto !important;
+		}
+	}
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Locatr Homepage</title>
+	<meta name="google-signin-client_id" content="864466645583-e5g2ha19f9q4iql1ujbiba50dvgtfti3.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+	<header class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-md-5 col-xs-5">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo" class="logo__img">
+					</a>
+				</div>
+				<div class="login col-md-7 col-xs-7">
+					<div class="g-signin2 login__google" data-onsuccess="onSignIn"></div>
+					<button type="button" class="login__menu-toggle" id="js-menu-toggle"><span></span>
+					<span></span>
+					<span></span></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="hide-menu">
+		<button type="button" class="hide-menu__btn" id="js-hide-menu"></button>
+		<ul>
+			<li><a href="index.html" class="hide-menu__link">Home</a></li>
+			<li><a href="#" class="hide-menu__link">About Us</a></li>
+			<li><a href="#" class="hide-menu__link">Help Page</a></li>
+			<li><a href="#" class="hide-menu__link">Contact</a></li>
+			<li><a href="single-item.html" class="hide-menu__link">Add Single Item</a></li>
+			<li><a href="my-stock.html" class="hide-menu__link">My Stock</a></li>
+			<li><a href="analytics.html" class="hide-menu__link">My Analytics</a></li>
+			<li><a href="add-spreadsheet.html" class="hide-menu__link">Add Spreadsheet</a></li>
+			<li><a href="add-system.html" class="hide-menu__link">Add System</a></li>
+		</ul>
+	</div>
+	<main class="page-main page-main--index">
+		<section class="promo" id="js-promo-slider">
+			<div class="promo__slide">
+				<div class="container">
+					<h1 class="promo__title">Best Products in One Place</h1>
+					<h2 class="promo__subtitle">With locatr you can find the best products in your location.</h2>
+					<form action="#" class="promo__form">
+						<div class="promo__wrapper">
+							<input class="promo__input" type="text" placeholder="What are you looking for?">
+							<button type="submit" class="promo__submit-btn"></button>
+						</div>
+						<div class="promo__btn-wrap">
+							<button type="submit" class="page-button promo__search-btn">Locatr Search</button>
+							<a href="#" class="page-button">Take Me There!</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="map">
+			<div class="map__wrapper" id="js-map">
+
+			</div>
+			<a href="#" class="page-button map__btn">Inspire Me!</a>
+		</section>
+		<section class="pop-items">
+			<div class="container">
+				<h2 class="pop-items__title page-title">Popular Items & Shops </h2>
+				<h3 class="pop-items__subtitle page-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+				<div class="row">
+					<div class="popular-item col-md-4">
+						<div class="popular-item__img"><img src="img/img1.jpg" alt="Waitrose Pineapple">
+							<button type="button" class="popular-item__like"></button></div>
+						<h4 class="popular-item__title"><a href="#">Waitrose Pineapple</a></h4>
+						<p class="popular-item__descr">
+							<span class="popular-item__price">£2.30</span> from Waitrose Caterham
+						</p>
+					</div>
+					<div class="popular-item col-md-4">
+						<div class="popular-item__img"><img src="img/img2.jpg" alt="Lakewood - Organic Pineapple Nectar">
+							<button type="button" class="popular-item__like"></button></div>
+						<h4 class="popular-item__title"><a href="#">Lakewood - Organic Pineapple Nectar</a></h4>
+						<p class="popular-item__descr">
+							<span class="popular-item__price">£2.30</span> from Whole Foods Caterham
+						</p>
+					</div>
+					<div class="popular-item col-md-4">
+						<div class="popular-item__img"><img src="img/img3.jpg" alt="Innocent Apple and Mango Juice 900ml ">
+							<button type="button" class="popular-item__like"></button></div>
+						<h4 class="popular-item__title"><a href="#">Innocent Apple and Mango Juice 900ml</a></h4>
+						<p class="popular-item__descr">
+							<span class="popular-item__price">£2.50</span> from Waitrose Caterham
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="how-works">
+			<div class="container">
+				<h2 class="how-works__title page-title">How Locatr Works</h2>
+				<h3 class="how-works__subtitle page-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+				<div class="row">
+					<div class="how-works__item how-works__item--search col-sm-4">
+						<h4 class="how-works__item-title">Search</h4>
+						<p class="how-works__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis et est ut semper. Duis a magna turpis.</p>
+					</div>
+					<div class="how-works__item how-works__item--locate col-sm-4">
+						<h4 class="how-works__item-title">Locate</h4>
+						<p class="how-works__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis et est ut semper. Duis a magna turpis.</p>
+					</div>
+					<div class="how-works__item how-works__item--buy col-sm-4">
+						<h4 class="how-works__item-title">Buy</h4>
+						<p class="how-works__item-descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis et est ut semper. Duis a magna turpis.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="create-acc">
+			<div class="container">
+				<h2 class="create-acc__title">Locatr is the best way to find products nearby</h2>
+				<h3 class="create-acc__subtitle">Donec gravida, magna non vestibulum maximus, erat neque lobortis nulla, sed pharetra ligula mauris eu tortor.</h3>
+<!--				<a href="#" class="page-button">Sing in with Google</a>-->
+				<div class="g-signin2 create-acc__google" data-onsuccess="onSignIn"></div>
+			</div>
+		</section>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-md-4 col-sm-4">
+					<a href="/">
+						<img src="img/logo.png" alt="Logo">
+					</a>
+					<p class="logo__descr">The Locatr purpose is to help people search products by locations.</p>
+				</div>
+				<div class="page-footer__menu col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Menu</li>
+						<li><a href="#" class="page-footer__link">Home</a></li>
+						<li><a href="#" class="page-footer__link">About Us</a></li>
+						<li><a href="#" class="page-footer__link">How It Works</a></li>
+						<li><a href="#" class="page-footer__link">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__support col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Support</li>
+						<li><a href="#" class="page-footer__link">FAQ</a></li>
+						<li><a href="#" class="page-footer__link">Sitemap</a></li>
+						<li><a href="#" class="page-footer__link">Terms & Conditions</a></li>
+						<li><a href="#" class="page-footer__link">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__in-touch col-md-4 col-xs-12">
+					<ul>
+						<li class="page-footer__subtitle">Get In Touch</li>
+						<li class="page-footer__link page-footer__link--address">72 Uxbridge Road SLAWSTON, LE16 7LT</li>
+						<li class="page-footer__link page-footer__link--mail">support@locatr.uk</li>
+						<li class="page-footer__link page-footer__link--tel">078 8836 4448</li>
+					</ul>
+					<div class="page-footer__socials">
+						<a class="page-footer__fb" href="#"></a>
+						<a class="page-footer__tw" href="#"></a>
+						<a class="page-footer__ln" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-footer__copy">
+			© 2017 Locatr. All rights reserved.
+		</div>
+	</footer>
+	<script src="js/libs.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXrC0FlJ52NH7rlNFW4HcghOotsM8C8lk&callback=initMap">
+	</script>
+	<script src="js/map.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script>
+		$(function() {
+			$.getJSON("js/jsontest.json", function(data) {
+				$(".promo__input").autocomplete({
+					source: data
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

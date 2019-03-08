@@ -1,0 +1,63 @@
+.single-item {
+	&__form {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		flex-direction: row;
+		padding-bottom: 90px;
+	}
+	&__wrap {
+		width: 48%;
+	}
+	&__map {
+		min-height: 460px;
+		margin-top: 30px;
+		margin-bottom: 40px;
+		width: 100%;
+		background-image: url(../img/map1.jpg);
+		background-size: cover;
+	}
+	&__buttons {
+		width: 100%;
+	}
+	&__category {
+		font-size: 24px;
+		line-height: 30px;
+		font-family: $roboto-b;
+		margin-top: 0;
+		margin-bottom: 30px;
+		color: $header-color;
+		&--margin {
+			margin-top: 50px;
+		}
+	}
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 17px;
+		margin-bottom: 20px;
+		color: $text-color;
+	}
+	&__input {
+		display: block;
+		width: 100%;
+	}
+	&__check {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 20px;
+	}
+	&__btn {
+		&--cancel {
+			margin-left: 15px;
+			background-color: $cancel-btn;
+			&:hover {
+				background-color: darken($cancel-btn, 5%);
+			}
+		}
+	}
+}

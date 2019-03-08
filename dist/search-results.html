@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search Results</title>
+	<meta name="google-signin-client_id" content="864466645583-e5g2ha19f9q4iql1ujbiba50dvgtfti3.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+	<header class="page-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-lg-9 col-md-8 col-xs-5">
+					<a href="index.html">
+						<img src="img/logo.png" alt="Logo" class="logo__img">
+					</a>
+					<form action="#" class="search-form">
+						<div class="search-form__wrapper">
+							<input class="search-form__input common-input" type="text" placeholder="What are you looking for?">
+							<button type="submit" class="search-form__submit-btn"></button>
+						</div>
+					</form>
+				</div>
+				<div class="login col-lg-3 col-md-4 col-xs-7">
+					<div class="g-signin2 login__google" data-onsuccess="onSignIn"></div>
+					<button type="button" class="login__menu-toggle" id="js-menu-toggle"><span></span>
+					<span></span>
+					<span></span></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="hide-menu">
+		<button type="button" class="hide-menu__btn" id="js-hide-menu"></button>
+		<ul>
+			<li><a href="index.html" class="hide-menu__link">Home</a></li>
+			<li><a href="#" class="hide-menu__link">About Us</a></li>
+			<li><a href="#" class="hide-menu__link">Help Page</a></li>
+			<li><a href="#" class="hide-menu__link">Contact</a></li>
+			<li><a href="single-item.html" class="hide-menu__link">Add Single Item</a></li>
+			<li><a href="my-stock.html" class="hide-menu__link">My Stock</a></li>
+			<li><a href="analytics.html" class="hide-menu__link">My Analytics</a></li>
+			<li><a href="add-spreadsheet.html" class="hide-menu__link">Add Spreadsheet</a></li>
+			<li><a href="add-system.html" class="hide-menu__link">Add System</a></li>
+		</ul>
+	</div>
+	<main class="page-main">
+		<section class="search-results">
+			<div class="search-results__panel">
+				<form action="#" class="search-results__from">
+					<div class="search-results__wrap">
+						<input type="text" class="search-results__input common-input" placeholder="Location">
+						<button type="button" class="search-results__btn page-button"><span>My Favourites</span></button>
+					</div>
+					<!--
+					<div class="search-results__range-wrap">
+						<div class="search-results__amount-wrap">
+							<span>Price:(low-hight) </span>
+						</div>
+						<div class="search-results__range" id="price-slider"></div>
+					</div>
+					<div class="search-results__range-wrap">
+						<div class="search-results__amount-wrap">
+							<span>Range: </span><input type="text" value="2" class="search-results__range-input"><span> miles/km</span>
+						</div>
+						<div class="search-results__range" id="distance-slider"></div>
+					</div>
+-->
+				<div class="search-results__select-wrap">
+					<select class="search-results__select">
+						<option value="Price (high to low)">Price (high to low)</option>
+						<option value="Price (low to high)">Price (low to high)</option>
+						<option value="Distance">Distance</option>
+					</select>
+				</div>
+				</form>
+				<div class="search-results__items">
+					<div class="popular-item col-md-4">
+						<div class="popular-item__img"><img src="img/img1.jpg" alt="Waitrose Pineapple">
+							<button type="button" class="popular-item__like"></button></div>
+						<div class="popular-item__info">
+							<h4 class="popular-item__title"><a href="#" onclick="calcRoute();" value="moscow" id="end">Waitrose Pineapple</a></h4>
+							<p class="popular-item__descr">
+								<span class="popular-item__price">£2.30</span> from Waitrose Caterham
+							</p>
+							<p class="popular-item__descr">
+								<span class="popular-item__price">2.0 miles/km</span> away from your current location
+							</p>
+						</div>
+					</div>
+					<div class="popular-item col-md-4">
+						<div class="popular-item__img"><img src="img/img2.jpg" alt="Lakewood - Organic Pineapple Nectar">
+							<button type="button" class="popular-item__like"></button></div>
+						<div class="popular-item__info">
+							<h4 class="popular-item__title"><a href="#" onclick="calcRoute();">Lakewood - Organic Pineapple Nectar</a></h4>
+							<p class="popular-item__descr">
+								<span class="popular-item__price">£2.30</span> from Whole Foods Caterham
+							</p>
+							<p class="popular-item__descr">
+								<span class="popular-item__price">2.0 miles/km</span> away from your current location
+							</p>
+						</div>
+					</div>
+					<div class="popular-item col-md-4">
+						<div class="popular-item__img"><img src="img/img3.jpg" alt="Innocent Apple and Mango Juice 900ml ">
+							<button type="button" class="popular-item__like"></button></div>
+						<div class="popular-item__info">
+							<h4 class="popular-item__title"><a href="#" onclick="calcRoute();">Innocent Apple and Mango Juice 900ml</a></h4>
+							<p class="popular-item__descr">
+								<span class="popular-item__price">£2.50</span> from Waitrose Caterham
+							</p>
+							<p class="popular-item__descr">
+								<span class="popular-item__price">2.0 miles/km</span> away from your current location
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="search-results__map" id="search-results__map"></div>
+		</section>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="row">
+				<div class="logo col-md-4 col-sm-4">
+					<a href="/">
+						<img src="img/logo.png" alt="Logo">
+					</a>
+					<p class="logo__descr">The Locatr purpose is to help people search products by locations.</p>
+				</div>
+				<div class="page-footer__menu col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Menu</li>
+						<li><a href="#" class="page-footer__link">Home</a></li>
+						<li><a href="#" class="page-footer__link">About Us</a></li>
+						<li><a href="#" class="page-footer__link">How It Works</a></li>
+						<li><a href="#" class="page-footer__link">Contact Us</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__support col-md-2 col-sm-4">
+					<ul>
+						<li class="page-footer__subtitle">Support</li>
+						<li><a href="#" class="page-footer__link">FAQ</a></li>
+						<li><a href="#" class="page-footer__link">Sitemap</a></li>
+						<li><a href="#" class="page-footer__link">Terms & Conditions</a></li>
+						<li><a href="#" class="page-footer__link">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="page-footer__in-touch col-md-4 col-xs-12">
+					<ul>
+						<li class="page-footer__subtitle">Get In Touch</li>
+						<li class="page-footer__link page-footer__link--address">72 Uxbridge Road SLAWSTON, LE16 7LT</li>
+						<li class="page-footer__link page-footer__link--mail">support@locatr.uk</li>
+						<li class="page-footer__link page-footer__link--tel">078 8836 4448</li>
+					</ul>
+					<div class="page-footer__socials">
+						<a class="page-footer__fb" href="#"></a>
+						<a class="page-footer__tw" href="#"></a>
+						<a class="page-footer__ln" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-footer__copy">
+			© 2017 Locatr. All rights reserved.
+		</div>
+	</footer>
+	<script src="js/libs.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXrC0FlJ52NH7rlNFW4HcghOotsM8C8lk&callback=initMap">
+	</script>
+	<script src="js/results-map.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/results-slider.js"></script>
+	<script>
+		$(function() {
+			$.getJSON("js/jsontest.json", function(data) {
+				$(".search-form__input").autocomplete({
+					source: data
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+.search-results {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: $how-works-bg;
+	&__panel {
+		width: 40%;
+		padding: 50px 30px;
+	}
+	&__wrap {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__input,
+	&__select,
+	&__btn {
+		width: 48%;
+		margin-bottom: 15px;
+	}
+	&__range-wrap {
+		margin-bottom: 30px;
+		span {
+			font-size: 17px;
+			color: $header-color;
+		}
+	}
+	&__select-wrap {
+		width: 48%;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 23px;
+			right: 13px;
+			color: $text-color;
+			width: 10px;
+			height: 6px;
+			background-image: url(../img/arrow-select.png);
+		}
+	}
+	&__select {
+		width: 100%;
+		padding: 13px 23px 15px 23px;
+		font-size: 17px;
+		background-image: none;
+		background-color: $white-color;
+		border: 1px solid $border-color;
+		outline: 0;
+		border-radius: 4px;
+		color: $text-color;
+		box-shadow: none;
+		height: 50px;
+		-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	}
+	&__btn {
+		padding-left: 15px;
+		padding-right: 15px;
+		span {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translate(0, -50%);
+				left: -25px;
+				background-repeat: no-repeat;
+				background-image: url(../img/heart.png);
+				width: 16px;
+				height: 14px;
+			}
+		}
+	}
+	&__amount-wrap {
+		display: inline-block;
+		vertical-align: middle;
+		width: 38%;
+	}
+	&__range {
+		display: inline-block;
+		vertical-align: middle;
+		width: 60% !important;
+	}
+	&__range-input {
+		border: 0;
+		background-color: transparent;
+		width: 20px;
+		&:focus {
+			outline: 0;
+		}
+	}
+	&__items {
+		.popular-item {
+			width: 100%;
+			margin-bottom: 15px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			&:nth-child(2) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			&__img {
+				width: 45%;
+			}
+			&__info {
+				width: 65%;
+				background-color: $white-color;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__map {
+		width: 60%;
+		min-height: 85vh;
+		background-image: url(../img/map3.jpg);
+		background-size: cover;
+	}
+}
